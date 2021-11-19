@@ -1,0 +1,143 @@
+﻿<Window x:Class="WindowsCalculatorV2.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WindowsCalculatorV2"
+        mc:Ignorable="d"
+                Title="MainWindow" Height="600" Width="400" Background="#FF243441">
+    <Grid Background="#FF243441">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="2*"/>
+            <RowDefinition Height="2*"/>
+            <RowDefinition Height="2*"/>
+            <RowDefinition Height="2*"/>
+            <RowDefinition Height="2*"/>
+        </Grid.RowDefinitions>
+        
+        <!-- Affichage du résultat des opérations -->
+        <TextBlock x:Name="result" Grid.Row="1" Grid.ColumnSpan="4" HorizontalAlignment="Right" Text="" VerticalAlignment="Center" Margin="0,0,20,0" Foreground="White" FontSize="30"/>
+        
+        <!-- Affichage des opérations -->
+        <TextBlock x:Name="operation" Grid.Row="3" Grid.ColumnSpan="4" HorizontalAlignment="Left" Text="" VerticalAlignment="Center" Margin="0,0,10,0" Foreground="#FF636C7C" FontSize="18"/>
+        
+        <!-- Affichage du résultat de l'opération -->
+        <Button Content="=" Grid.Column="3" Grid.Row="8" Click="ShowResult" Background="#FFEC802E" Margin="10" Foreground="White" FontSize="20" BorderBrush="#FF243441"/>
+        
+        <!-- Ajout de valeur numérique -->
+        <Button Content="0" Grid.Column="1" Grid.Row="8" Click="AddValue" Background="#FF243441" Margin="10" BorderBrush="#FF243441" Foreground="#FF636C7C" FontSize="20">
+            <Button.Effect>
+                <DropShadowEffect/>
+            </Button.Effect>
+        </Button>
+        <Button Content="1" Grid.Column="0" Grid.Row="7" Click="AddValue" Background="#FF243441" Margin="10" BorderBrush="#FF243441" Foreground="#FF636C7C" FontSize="20">
+            <Button.Effect>
+                <DropShadowEffect/>
+            </Button.Effect>
+        </Button>
+        <Button Content="2" Grid.Column="1" Grid.Row="7" Click="AddValue" Background="#FF243441" Margin="10" BorderBrush="#FF243441" Foreground="#FF636C7C" FontSize="20">
+            <Button.Effect>
+                <DropShadowEffect/>
+            </Button.Effect>
+        </Button>
+        <Button Content="3" Grid.Column="2" Grid.Row="7" Click="AddValue" Background="#FF243441" Margin="10" BorderBrush="#FF243441" Foreground="#FF636C7C" FontSize="20">
+            <Button.Effect>
+                <DropShadowEffect/>
+            </Button.Effect>
+        </Button>
+        <Button Content="4" Grid.Column="0" Grid.Row="6" Click="AddValue" Background="#FF243441" Margin="10" BorderBrush="#FF243441" Foreground="#FF636C7C" FontSize="20">
+            <Button.Effect>
+                <DropShadowEffect/>
+            </Button.Effect>
+        </Button>
+        <Button Content="5" Grid.Column="1" Grid.Row="6" Click="AddValue" Background="#FF243441" Margin="10" BorderBrush="#FF243441" Foreground="#FF636C7C" FontSize="20">
+            <Button.Effect>
+                <DropShadowEffect/>
+            </Button.Effect>
+        </Button>
+        <Button Content="6" Grid.Column="2" Grid.Row="6" Click="AddValue" Background="#FF243441" Margin="10" BorderBrush="#FF243441" Foreground="#FF636C7C" FontSize="20">
+            <Button.Effect>
+                <DropShadowEffect/>
+            </Button.Effect>
+        </Button>
+        <Button Content="7" Grid.Column="0" Grid.Row="5" Click="AddValue" Margin="10" FontSize="20" BorderBrush="#FF243441" BorderThickness="0,0,0,0" Background="#FF243441" Foreground="#FF636C7C">
+            <Button.Effect>
+                <DropShadowEffect/>
+            </Button.Effect>
+        </Button>
+        <Button Content="8" Grid.Column="1" Grid.Row="5" Click="AddValue" Background="#FF243441" Margin="10" BorderBrush="#FF243441" Foreground="#FF636C7C" FontSize="20" BorderThickness="1,1,1,1">
+            <Button.Effect>
+                <DropShadowEffect/>
+            </Button.Effect>
+        </Button>
+        <Button Content="9" Grid.Column="2" Grid.Row="5" Click="AddValue" Background="#FF243441" Margin="10" BorderBrush="#FF243441" Foreground="#FF636C7C" FontSize="20">
+            <Button.Effect>
+                <DropShadowEffect/>
+            </Button.Effect>
+        </Button>
+
+        <!-- Ajout de décimal -->
+        <Button Content="," Grid.Column="2" Grid.Row="8" Click="AddValue" Background="#FF243441" Margin="10" BorderBrush="#FF243441" Foreground="#FF636C7C" FontSize="20">
+            <Button.Effect>
+                <DropShadowEffect/>
+            </Button.Effect>
+        </Button>
+
+        <!-- Méthodes de suppression -->
+        <Button Content="CE" Grid.Column="0" Grid.Row="4" Click="ClearValue" Background="#FF243441" Margin="10" BorderBrush="#FF243441" Foreground="#FF636C7C" FontSize="20">
+            <Button.Effect>
+                <DropShadowEffect/>
+            </Button.Effect>
+        </Button>
+        <Button Content="C" Grid.Column="1" Grid.Row="4" Click="ClearAll" Background="#FF243441" Margin="10" BorderBrush="#FF243441" Foreground="#FF636C7C" FontSize="20">
+            <Button.Effect>
+                <DropShadowEffect/>
+            </Button.Effect>
+        </Button>
+        <Button Content="DEL" Grid.Column="2" Grid.Row="4" Click="DeleteLastChar" Background="#FF243441" Margin="10" BorderBrush="#FF243441" Foreground="#FF636C7C" FontSize="20">
+            <Button.Effect>
+                <DropShadowEffect/>
+            </Button.Effect>
+        </Button>
+
+        <!-- Inverser le résultat -->
+        <Button Content="-/+" Grid.Column="0" Grid.Row="8" Click="RevertValue" Background="#FF243441" Margin="10" BorderBrush="#FF243441" Foreground="#FF636C7C" FontSize="20">
+            <Button.Effect>
+                <DropShadowEffect/>
+            </Button.Effect>
+        </Button>
+        
+        <!-- Signes d'opérations -->
+        <Button Content="+" Grid.Column="3" Grid.Row="7" Click="AddOperator" Background="#FF243441" Margin="10" BorderBrush="#FF243441" Foreground="#FF636C7C" FontSize="20">
+            <Button.Effect>
+                <DropShadowEffect/>
+            </Button.Effect>
+        </Button>
+        <Button Content="-" Grid.Column="3" Grid.Row="6" Click="AddOperator" Background="#FF243441" Margin="10" BorderBrush="#FF243441" Foreground="#FF636C7C" FontSize="20">
+            <Button.Effect>
+                <DropShadowEffect/>
+            </Button.Effect>
+        </Button>
+        <Button Content="*" Grid.Column="3" Grid.Row="5" Click="AddOperator" Background="#FF243441" Margin="10" BorderBrush="#FF243441" Foreground="#FF636C7C" FontSize="20">
+            <Button.Effect>
+                <DropShadowEffect/>
+            </Button.Effect>
+        </Button>
+        <Button Content="/" Grid.Column="3" Grid.Row="4" Click="AddOperator" Background="#FF243441" Margin="10" BorderBrush="#FF243441" Foreground="#FF636C7C" FontSize="20">
+            <Button.Effect>
+                <DropShadowEffect/>
+            </Button.Effect>
+        </Button>
+
+    </Grid>
+</Window>
