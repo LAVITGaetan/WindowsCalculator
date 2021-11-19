@@ -4,9 +4,9 @@ Le but du projet est de reproduire les fonctionnalités basiques d'une calculatr
 
 ## Wireframe et Maquette
 
-![Wireframe](https://zupimages.net/up/21/46/5kfs.png)
-![Maquette](https://zupimages.net/up/21/46/dw62.png)
+![Wireframe](https://zupimages.net/up/21/46/dw62.png)
+![Maquette](https://zupimages.net/up/21/46/5kfs.png)
 
 ## Points d'améliorations
-Garder en mémoire plusieurs opérations passées
+Garder en mémoire plusieurs opérations passées  
 Visuel plus attrayant
